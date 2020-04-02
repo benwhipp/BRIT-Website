@@ -84,9 +84,29 @@ nav button {
     font-size: 18px;
     margin: 0 10px;
     padding: 0px 20px;
-    color: #1B264F;
+    color: #393E41;
     font-weight: 400;
     cursor: pointer;
+    position: relative;
+    letter-spacing: 0.1rem;
+}
+
+nav button::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 40px);
+    transform: scaleX(0);
+    height: 3px;
+    bottom: -10px;
+    left: 20px;
+    background: #f59322;
+    transform-origin: bottom left;
+    transition: all 0.15s ease-in-out;
+}
+
+nav button:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom right;
 }
 
 nav button:hover,
@@ -96,7 +116,7 @@ nav button:active {}
     /*border: 3px solid #f57d22;*/
     margin: 0 0 0 40px;
     color: #fff;
-    background: rgba(245, 145, 34, 1);
+    background: #f59322;
     padding: 20px 40px;
     transition: all 0.1s ease-in-out;
     border: none;
@@ -108,15 +128,17 @@ nav button:active {}
     background: rgba(245, 145, 34, 0.8);
 }
 
+.contact-button:hover::before {
+    transform: scaleX(0);
+}
+
 .main {
     padding: 174px 0 0;
 }
 
 #about-background {
     width: 100%;
-    background: #cfe2e9
-        /*url(assets/hero.jpg) top center no-repeat*/
-    ;
+    background: #cfe2e9;
     background-size: cover;
 }
 
@@ -125,7 +147,7 @@ section {
 }
 
 #about {
-    padding: 50px 0 75px;
+    padding: 225px 0 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -463,13 +485,20 @@ footer {
 
 @media (max-width: 960px) {
 
-    #client-usps h3 {
-        max-width: 250px;
+    #client-sectors {
+        flex-direction: column;
+        padding: 60px 5vw;
     }
 
-    #client-usps i {
-        font-size: 50px;
-        padding: 60px;
+    #client-sectors-left {
+        text-align: center;
+        padding: 0;
+        margin: 0 0 30px;
+    }
+
+    #client-usps {
+        grid: auto / auto;
+        justify-content: center;
     }
 
     .client-icon {
@@ -484,15 +513,72 @@ footer {
 
 @media (max-width: 700px) {
 
+    #contact-bar {
+        font-size: 14px;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    #contact-bar a {
+        margin: 0 0 0 7%
+    }
+
+    #logo img {
+        max-width: 120px;
+    }
+
+    #nav-bar {
+        width: 100vw;
+        padding: 10px 20px;
+    }
+
+    #nav-buttons {
+        display: none;
+    }
+
+    #about {
+        padding: 174px 0 50px;
+    }
+
+    #about-text {
+        width: 100vw;
+        padding: 0 10vw;
+    }
+
+    #hero-container {
+        display: none;
+    }    
+    
     .server-icon img {
         max-width: 150px;
         padding: 25px;
         margin: 10px;
     }
 
+    #sets-apart {
+        background-size: 80%;
+    }
+
+    #sets-apart-wrapper {
+        padding: 50px 7% 450px;
+    }
+
+    #sets-apart-wrapper h2 {
+        margin: 0 0 20px;
+    }
+
+    #sets-apart-list {
+        margin: 30px 0 0;
+        max-width: 100%;
+    }
+
 }
 
 @media (max-width: 435px) {
+
+    .client-card {
+        width: 80%;
+    }
 
     .server-icon img {
         max-width: 180px;
