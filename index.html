@@ -2,6 +2,7 @@
     <title>BRIT</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/671bc8dbfe.js" defer></script>
     <script src="script.js" defer></script>
 
@@ -9,142 +10,163 @@
 
 <body>
 
-    <div class="contact-bar">
+    <section id="contact-bar">
         <strong>Get in touch:</strong>
         <a href="mailto:enquiries@br-it.co.uk">enquiries@br-it.co.uk</a>
         <a href="tel:01304803649">01304 803 649</a>
-    </div>
+    </section>
 
     <nav>
-        <div id="logo">
-            <img src="assets/union-jack.svg">
-            <h1>BR-IT Technology Solutions</h1>
-        </div>
-        <div class="buttons">
-            <button id="client-sectors-button">Client Sectors</button>
-            <button id="services-button">Services</button>
-            <button id="about-us-button">About Us</button>
-            <button id="contact-button">Contact Us</button>
+        <div id="nav-bar">
+            <div id="logo">
+                <img src="assets/union-jack.svg">
+                <h1>BR-IT</h1>
+            </div>
+            <div id="nav-buttons">
+                <button id="client-sectors-button">CLIENT SECTORS</button>
+                <button id="services-button">SERVICES</button>
+                <button id="about-us-button">ABOUT US</button>
+                <button class="contact-button">Contact Us</button>
+            </div>
         </div>
     </nav>
 
-    <div class="main">
+    <img class="main">
 
-        <div id="about-background">
-            <section id="about">
-                <h1>Expert, Affordable IT and Infrastructure Support<br><span id="h1-line-two">for your Small Business</span></h1>
-                <p>BR-IT offers fast and comprehensive service to suit your budget and needs.</p>
-            </section>
-            <svg class="slant-up" xmlns="http://www.w3.org/2000/svg" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
-                <path fill="#eee" d="M0 102 L100 102 L100 0 Z" style="filter:url(#dropshadow2)"></path>
-            </svg>
+    <img id="about-background">
+    <section id="about">
+        <div id="about-text">
+            <h1>Expert, Affordable IT and Infrastructure Support for Your Small Business</h1>
+            <p>BR-IT offers fast and comprehensive service to suit your budget and needs.</p>
+            <button>Contact Us</button>
         </div>
+        <div id="hero-container">
+            <img id="hero-image" src="./assets/hero.jpg">
+        </div>
+    </section>
+    <!--<svg class="slant-up" xmlns="http://www.w3.org/2000/svg" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+                <path fill="#eee" d="M0 102 L100 102 L100 0 Z" style="filter:url(#dropshadow2)"></path>
+            </svg>-->
+    </img>
 
-        <section id="client-sectors">
-            <h2>We specialise in the following areas:</h2>
-            <div id="client-usps">
-                <div class="client-icon">
+    <section id="client-sectors">
+        <div id="client-sectors-left">
+            <h2>We Specialise in the Following Areas:</h2>
+            <p>We provide small businesses with round the clock installation and support. Whether you need on-site installation or on-going maintenance and remote support, we can help you.</p><br>
+            <p>And we're VAT registered, so can include new or refurbished parts and procurement as part of our package to suit your budget.</p>
+        </div>
+        <div id="client-usps">
+            <div id="small-businesses-card" class="client-card">
+                <div id="small-businesses" class="client-card-top">
                     <i class="fas fa-building"></i>
                     <h3>Small Businesses</h3>
                 </div>
-                <div class="client-icon">
+                <p>We understand the needs of small firms, and cater to them specifically.</p>
+            </div>
+            <div id="users-5-25-card" class="client-card">
+                <div id="users-5-25" class="client-card-top">
                     <i class="fas fa-users"></i>
                     <h3>5-25 Users</h3>
                 </div>
-                <div class="client-icon">
+                <p>Small teams doesn't mean small plans; people are more networked than ever.</p>
+            </div>
+            <div id="existing-infrastructure-card" class="client-card">
+                <div id="existing-infrastructure" class="client-card-top">
                     <i class="fas fa-server"></i>
-                    <h3>Existing Microsoft Infrastructure</h3>
+                    <h3>Existing Infrastructure</h3>
                 </div>
-                <div class="client-icon">
+                <p>There's no need to start from scratch, we can repurpose your existing system.</p>
+            </div>
+            <div id="no-it-department-card" class="client-card">
+                <div id="no-it-department" class="client-card-top">
                     <i class="fas fa-desktop"></i>
-                    <i class="fas fa-ban icon-overlay"></i>
                     <h3>No IT Department</h3>
                 </div>
+                <p>We provide round the clock support - no IT department required.</p>
             </div>
-            <div class="copy-padding">
-                <p>We provide small businesses with round the clock installation and support. Whether you need on-site installation or on-going maintenance and remote support, we can help you.</p>
-                <p>And we're VAT registered, so can include new or refurbished parts and procurement as part of our package to suit your budget.</p>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <svg class="slant-up" xmlns="http://www.w3.org/2000/svg" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
-            <filter id="dropshadow1" height="200%">
+    <svg class="slant-up" xmlns="http://www.w3.org/2000/svg" width="100%" height="100" viewBox="0 0 100 102"
+        preserveAspectRatio="none">
+        <filter id="dropshadow1" height="200%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+            <feOffset dx="0" dy="3" result="offsetblur" />
+            <feComponentTransfer>
+                <feFuncA type="linear" slope="0.3" />
+            </feComponentTransfer>
+            <feMerge>
+                <feMergeNode />
+                <feMergeNode in="SourceGraphic" />
+            </feMerge>
+        </filter>
+        <path fill="#fff" d="M0 0 L0 102 L100 102 Z" style="filter:url(#dropshadow2)"></path>
+    </svg>
+
+    <section id="services">
+        <div>
+            <h2>We offer support for the following platforms:</h2>
+        </div>
+        <div class="platforms">
+            <div class="platform-icon">
+                <img src="assets/apple-logo.svg">
+            </div>
+            <div class="platform-icon">
+                <img src="assets/microsoft-logo.svg">
+            </div>
+            <div class="platform-icon">
+                <img src="./assets/android-logo.svg">
+            </div>
+        </div>
+        <div class="servers">
+            <div class="server-icon">
+                <img src="assets/windows-server-2008-logo.png">
+            </div>
+            <div class="server-icon">
+                <img src="assets/windows-server-2012-logo.svg">
+            </div>
+            <div class="server-icon">
+                <img src="assets/windows-server-2016-logo.svg">
+            </div>
+            <div class="server-icon">
+                <img src="assets/windows-server-2019.svg">
+            </div>
+        </div>
+    </section>
+
+    <section id="sets-apart">
+        <svg class="slant-down" xmlns="http://www.w3.org/2000/svg" width="100%" height="100" viewBox="0 0 100 102"
+            preserveAspectRatio="none">
+            <filter id="dropshadow2" height="200%">
                 <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
                 <feOffset dx="0" dy="3" result="offsetblur" />
                 <feComponentTransfer>
-                    <feFuncA type="linear" slope="0.3" />
+                    <feFuncA type="linear" slope="0.1" />
                 </feComponentTransfer>
                 <feMerge>
                     <feMergeNode />
                     <feMergeNode in="SourceGraphic" />
                 </feMerge>
             </filter>
-            <path fill="#fff" d="M0 0 L0 102 L100 102 Z" style="filter:url(#dropshadow2)"></path>
+            <path fill="#fff" d="M100 102 L0 0 L100 0 Z" style="filter:url(#dropshadow2)"></path>
         </svg>
-
-        <section id="services">
-            <div>
-                <h2>We offer support for the following platforms:</h2>
-            </div>
-            <div class="platforms">
-                <div class="platform-icon">
-                    <img src="assets/apple-logo.svg">
-                </div>
-                <div class="platform-icon">
-                    <img src="assets/microsoft-logo.svg">
-                </div>
-                <div class="platform-icon">
-                    <img src="assets/mobile-icon.png">
-                    iOX and Android
+        <div id="sets-apart-wrapper">
+            <h2>What sets us apart</h2>
+            <p>We've been supporting businesses in the South East of England and London for nearly ten years.</p>
+            <div id="sets-apart-content">
+                <div id="sets-apart-list">
+                    <ul>
+                        <li>Support whenever you need it, 8.30am - 7.00pm Mon - Fri</li>
+                        <li>Parts and procurement included as standard</li>
+                        <li>Bespoke service catered to your needs and budget</li>
+                        <li>10 years of experience for companies in the South East and London</li>
+                        <li>99% of issues are solved without a callout</li>
+                    </ul>
                 </div>
             </div>
-            <div class="servers">
-                <div class="server-icon">
-                    <img src="assets/windows-server-2008-logo.png">
-                </div>
-                <div class="server-icon">
-                    <img src="assets/windows-server-2012-logo.svg">
-                </div>
-                <div class="server-icon">
-                    <img src="assets/windows-server-2016-logo.svg">
-                </div>
-                <div class="server-icon">
-                    <img src="assets/windows-server-2019.svg">
-                </div>
-            </div>
-        </section>
-
-        <section id="sets-apart">
-            <svg class="slant-down" xmlns="http://www.w3.org/2000/svg" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
-                <filter id="dropshadow2" height="200%">
-                    <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
-                    <feOffset dx="0" dy="3" result="offsetblur" />
-                    <feComponentTransfer>
-                        <feFuncA type="linear" slope="0.1" />
-                    </feComponentTransfer>
-                    <feMerge>
-                        <feMergeNode />
-                        <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                </filter>
-                <path fill="#fff" d="M100 102 L0 0 L100 0 Z" style="filter:url(#dropshadow2)"></path>
-            </svg>
-            <div id="sets-apart-wrapper">
-                <h2>What sets us apart</h2>
-                <p>We've been supporting businesses in the South East of England and London for nearly ten years.</p>
-                <div id="sets-apart-content">
-                    <div id="sets-apart-list">
-                        <ul>
-                            <li>Support whenever you need it, 8.30am - 7.00pm Mon - Fri</li>
-                            <li>Parts and procurement included as standard</li>
-                            <li>Bespoke service catered to your needs and budget</li>
-                            <li>10 years of experience for companies in the South East and London</li>
-                            <li>99% of issues are solved without a callout</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <svg class="slant-up" xmlns="http://www.w3.org/2000/svg" width="100%" height="100" viewBox="0 0 100 102" preserveAspectRatio="none">
+        </div>
+        <!--<svg class="slant-up" xmlns="http://www.w3.org/2000/svg" width="100%" height="100" viewBox="0 0 100 102"
+                preserveAspectRatio="none">
                 <filter id="dropshadow3" height="200%">
                     <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
                     <feOffset dx="0" dy="0" result="offsetblur" />
@@ -157,35 +179,41 @@
                     </feMerge>
                 </filter>
                 <path fill="#59A96A" d="M100 0 L0 102 L102 102 Z" style="filter:url(#dropshadow3)"></path>
-            </svg>
-        </section>
+            </svg>-->
+    </section>
 
-        <section id="contact">
-            <h2>Get in touch and let's see how we can help you.</h2>
-            <div id="contact-form">
-                <form>
-                    <input type="text" id="name" name="user_name" maxlength="50" placeholder="Your name" size="50" required><br>
-                    <input type="text" id="company-name" name="company_name" maxlength="50" placeholder="Your company name" size="50" required><br>
-                    <input type="email" id="email" name="user_email" maxlength="50" placeholder="Your email address" size="50" required><br>
-                    <input type="tel" id="telephone-number" name="user_telephone_number" maxlength="50" placeholder="Your telephone number" size="50" required><br>
-                    <textarea id="user-project" name="user_project" placeholder="Tell me about your project" cols="50" minlength="1" rows="10" required></textarea>
+    <section id="contact">
+        <h2>Get in touch and let's see how we can help you.</h2>
+        <div id="contact-form">
+            <form>
+                <input type="text" id="name" name="user_name" maxlength="50" placeholder="Your name" size="50"
+                    required><br>
+                <input type="text" id="company-name" name="company_name" maxlength="50" placeholder="Your company name"
+                    size="50" required><br>
+                <input type="email" id="email" name="user_email" maxlength="50" placeholder="Your email address"
+                    size="50" required><br>
+                <input type="tel" id="telephone-number" name="user_telephone_number" maxlength="50"
+                    placeholder="Your telephone number" size="50" required><br>
+                <textarea id="user-project" name="user_project" placeholder="Tell me about your project" cols="50"
+                    minlength="1" rows="10" required></textarea>
 
-                </form>
-            </div>
-            <div>
-                <button>
-                    Contact Us
-                </button>
-            </div>
-        </section>
+            </form>
+        </div>
+        <div>
+            <button>
+                Contact Us
+            </button>
+        </div>
+    </section>
 
-    </div>
+    </img>
 
     <footer>
         <span>
             &copy; <span id="footer-date"></span> BR-IT, All Rights Reserved.
             <br>
-            BR-IT (Support and Consultancy) Ltd is a trading name of Barry Lyndsell. Registered in England and Wales. Registered Office: 93 Lewisham Road, Dover, Kent. CT17 0PA.
+            BR-IT (Support and Consultancy) Ltd is a trading name of Barry Lyndsell. Registered in England and Wales.
+            Registered Office: 93 Lewisham Road, Dover, Kent. CT17 0PA.
             <br>
             Company Registration Number: 08272896. VAT Registration Number: GB 154 87 44 81.
         </span>
