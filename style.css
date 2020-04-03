@@ -8,7 +8,7 @@ h2 {
 body {
     width: 100%;
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f9ff;
+    background-color: #fff;
     color: #393E41;
     line-height: 150%;
     font-size: 16px;
@@ -32,6 +32,7 @@ h2 {
     width: 100%;
     z-index: 99;
     box-sizing: border-box;
+    display: none;
 }
 
 #contact-bar a {
@@ -44,21 +45,16 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 44px 0 0;
-    position: fixed;
     width: 100%;
-    z-index: 98;
     box-sizing: border-box;
-    background: rgba(0, 0, 0, 0);
 }
 
 #nav-bar {
     padding: 25px 50px;
     background-color: #fff;
     display: flex;
-    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1);
     align-items: center;
-    width: 60vw;
+    width: 75vw;
 }
 
 #logo {
@@ -84,17 +80,18 @@ nav button {
     font-size: 18px;
     margin: 0 10px;
     padding: 0px 20px;
-    color: #393E41;
-    font-weight: 400;
+    color: #000;
+    font-weight: 700;
     cursor: pointer;
     position: relative;
-    letter-spacing: 0.1rem;
+    letter-spacing: -0.5;
+    outline: none;
 }
 
 nav button::before {
     content: '';
     position: absolute;
-    width: calc(100% - 40px);
+    width: calc(100% - 70px);
     transform: scaleX(0);
     height: 3px;
     bottom: -10px;
@@ -136,28 +133,24 @@ nav button:active {}
     padding: 174px 0 0;
 }
 
-#about-background {
-    width: 100%;
-    background: #cfe2e9;
-    background-size: cover;
-}
-
 section {
     padding: 75px 20px;
 }
 
 #about {
-    padding: 225px 0 75px;
+    padding: 50px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     justify-items: flex-end;
+    background: url('./assets/wave.svg') 100% 90% / 120vw;
+    box-sizing: border-box;
 }
 
 #about h1 {
-    font-size: 40px;
+    font-size: 44px;
     color: #393E41;
-    line-height: 150%;
+    line-height: 1.3em;
     font-weight: 900;
     margin: 0 0 20px;
 }
@@ -170,24 +163,38 @@ section {
 #hero-container {
     max-width: 40%;
     position: relative;
+    padding: 0 5vw;
 }
 
 #about img {
     max-width: 100%;
-    border-radius: 25px 0 0 25px;
+    border-radius: 100px 0 100px 0;
     position: relative;
+    z-index: 1;
 }
 
 #hero-container::before {
     content: "";
     position: absolute;
-    width: calc(100% + 25px);
-    height: 100%;
-    border-radius: 25px 0 0 25px;
-    top: 25px;
-    left: -25px;
+    width: 250px;
+    height: 250px;
+    bottom: -40px;
+    left: 0;
     background: #59F8E8;
-    z-index: -1;
+    z-index: 0;
+}
+
+#hero-container::after {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    bottom: -75px;
+    right: 5%;
+    border-radius: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0) 60%,
+    #f59322 60%);
+    z-index: 0;
 }
 
 #about button {
@@ -206,7 +213,7 @@ section {
     height: 100%;
     width: 60%;
     text-align: left;
-    padding: 0 15vw;
+    padding: 0 10vw;
 }
 
 #h1-line-two {
@@ -217,7 +224,7 @@ section {
 #client-sectors {
     display: flex;
     justify-content: space-between;
-    background: rgb(238, 238, 238);
+    background: #e7f0ff;
     text-align: left;
     padding: 90px 15vw 60px;
 }
@@ -229,14 +236,28 @@ section {
     justify-content: center;
 }
 
+#cards-left,
+#cards-right {
+    display: flex;
+    flex-direction: column;
+}
+
+#cards-right {
+    padding: 35px 0 0;
+}
+
+
 .client-card {
     display: flex;
     padding: 20px 30px;
     border-radius: 15px;
     flex-direction: column;
     width: 300px;
+    height: fit-content;
     box-shadow: 5px 5px 5px rgb(214, 214, 214);
     transition: all 0.3s ease-in-out;
+    background: #fff;
+    margin: 15px;
 }
 
 .client-card:hover {
@@ -260,10 +281,6 @@ section {
     font-size: 16px;
 }
 
-#small-businesses-card {
-    background: linear-gradient(90deg, #1B264F 0%, #1B264F 2%, #fff 2%);
-}
-
 #small-businesses i,
 #small-businesses h3 {
     color: #1B264F;
@@ -271,10 +288,6 @@ section {
 
 #small-businesses h3 {
     background: #D6E7FF;
-}
-
-#users-5-25-card {
-    background: linear-gradient(90deg, #4D1B4F 0%, #4D1B4F 2%, #fff 2%);
 }
 
 #users-5-25 i,
@@ -286,10 +299,6 @@ section {
     background: #F2D6FF;
 }
 
-#existing-infrastructure-card {
-    background: linear-gradient(90deg, #1B4F22 0%, #1B4F22 2%, #fff 2%);
-}
-
 #existing-infrastructure i,
 #existing-infrastructure h3 {
     color: #1B4F22;
@@ -297,10 +306,6 @@ section {
 
 #existing-infrastructure h3 {
     background: #D6FFD7;
-}
-
-#no-it-department-card {
-    background: linear-gradient(90deg, #4F1B1B 0%, #4F1B1B 2%, #fff 2%);
 }
 
 #no-it-department i,
@@ -347,9 +352,12 @@ section {
 }
 
 #client-usps {
+    display: flex;
+    /*
     display: grid;
     grid: auto auto / auto auto;
     grid-gap: 30px;
+    align-content: center;*/
 }
 
 .client-icon {
@@ -368,7 +376,7 @@ section {
 
 #sets-apart {
     padding: 0;
-    background: url(./assets/laptop.png) bottom right no-repeat, rgb(238, 238, 238);
+    background: url(./assets/laptop.png) bottom right no-repeat, #e7f0ff;
     background-size: 40%;
 }
 
@@ -453,12 +461,12 @@ section {
 footer {
     background-color: #1B264F;
     color: #fff;
-    padding: 40px 20px;
+    padding: 60px 20px 40px;
     line-height: 200%;
 }
 
 .slant-up {
-    background: rgb(238, 238, 238);
+    background: #e7f0ff;
 }
 
 .slant-down {}
