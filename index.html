@@ -5,6 +5,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/671bc8dbfe.js" defer></script>
     <script src="script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
 </head>
 
@@ -19,8 +20,7 @@
     <nav>
         <div id="nav-bar">
             <div id="logo">
-                <img src="assets/union-jack.svg">
-                <h1>BR-IT</h1>
+                <img src="./assets/logo.png">
             </div>
             <div id="nav-buttons">
                 <button id="client-sectors-button">Client Sectors</button>
@@ -30,7 +30,7 @@
             </div>
         </div>
     </nav>
-    
+
     <section id="about">
         <div id="about-text">
             <h1>Expert, Affordable IT and Infrastructure Support for Your Small Business</h1>
@@ -48,11 +48,14 @@
 
     <section id="client-sectors">
         <div id="client-sectors-left">
+            <h4>Our Services</h4>
             <h2>We Specialise in the Following Areas:</h2>
-            <p>We provide small businesses with round the clock installation and support. Whether you need on-site installation or on-going maintenance and remote support, we can help you.</p><br>
-            <p>And we're VAT registered, so can include new or refurbished parts and procurement as part of our package to suit your budget.</p>
+            <p>We provide small businesses with round the clock installation and support. Whether you need on-site
+                installation or on-going maintenance and remote support, we can help you.</p><br>
+            <p>And we're VAT registered, so can include new or refurbished parts and procurement as part of our package
+                to suit your budget.</p>
         </div>
-        <div id="client-usps">
+        <div id="client-sectors-right">
             <div id="cards-left">
                 <div id="small-businesses-card" class="client-card">
                     <div id="small-businesses" class="client-card-top">
@@ -85,8 +88,8 @@
                     <p>We provide round the clock support - no IT department required.</p>
                 </div>
             </div>
-            
-            
+
+
         </div>
     </section>
 
@@ -108,6 +111,7 @@
 
     <section id="services">
         <div>
+
             <h2>We offer support for the following platforms:</h2>
         </div>
         <div class="platforms">
@@ -186,30 +190,42 @@
     </section>
 
     <section id="contact">
-        <h2>Get in touch and let's see how we can help you.</h2>
-        <div id="contact-form">
-            <form>
-                <input type="text" id="name" name="user_name" maxlength="50" placeholder="Your name" size="50"
-                    required><br>
-                <input type="text" id="company-name" name="company_name" maxlength="50" placeholder="Your company name"
-                    size="50" required><br>
-                <input type="email" id="email" name="user_email" maxlength="50" placeholder="Your email address"
-                    size="50" required><br>
-                <input type="tel" id="telephone-number" name="user_telephone_number" maxlength="50"
-                    placeholder="Your telephone number" size="50" required><br>
-                <textarea id="user-project" name="user_project" placeholder="Tell me about your project" cols="50"
-                    minlength="1" rows="10" required></textarea>
-
-            </form>
+        <div id="contact-left">
+            <h4>Contact Us</h4>
+            <h2>Get in touch and let's see how we can help you.</h2>
+            <p>We respond to all enquiries within two working days, and we're happy to talk through your project and provide a quote.</p>
         </div>
-        <div>
-            <button>
-                Contact Us
-            </button>
+        <div id="contact-right">
+            <div id="contact-form">
+                <form>
+                    <div class="form-input">
+                        <input type="text" id="name" name="user_name" maxlength="35" size="50" required>
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="form-input">
+                        <input type="text" id="company-name" name="company_name" maxlength="35" size="50" required>
+                        <label for="company-name">Company Name</label>
+                    </div>
+                    <div class="form-input">
+                        <input type="email" id="email" name="user_email" maxlength="35" size="50" required>
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="form-input">
+                        <input type="tel" id="telephone-number" name="user_telephone_number" maxlength="35" size="50" required>
+                        <label for="telephone-number">Telephone Number</label>
+                    </div>
+                    <div class="form-input">
+                        <textarea id="user-project" name="user_project" cols="50"
+                        minlength="1" rows="8" required></textarea>
+                        <label for="user-project">About Your Project</label>
+                    </div>
+                </form>
+                <button>
+                    Contact Us
+                </button>
+            </div>
         </div>
     </section>
-
-    </img>
 
     <footer>
         <span>

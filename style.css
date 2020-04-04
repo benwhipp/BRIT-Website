@@ -21,6 +21,12 @@ h2 {
     margin: 0 0 40px;
 }
 
+h4 {
+    margin: 0 0 10px;
+    color: #1B4F22;
+    font-size: 20px;
+}
+
 #contact-bar {
     background-color: #0197f6;
     color: #fff;
@@ -143,7 +149,7 @@ section {
     justify-content: space-between;
     align-items: center;
     justify-items: flex-end;
-    background: url('./assets/wave.svg') 100% 90% / 120vw;
+    background: url('./assets/wave.svg') 100% 90% / 100vw no-repeat;
     box-sizing: border-box;
 }
 
@@ -226,7 +232,7 @@ section {
     justify-content: space-between;
     background: #e7f0ff;
     text-align: left;
-    padding: 90px 15vw 60px;
+    padding: 90px 10vw 60px;
 }
 
 #client-sectors-left {
@@ -274,7 +280,7 @@ section {
 
 }
 
-#client-usps h3 {
+#client-sectors-right h3 {
     border-radius: 100px;
     padding: 10px 15px;
     margin: 0 0 0 10px;
@@ -318,7 +324,7 @@ section {
 }
 
 
-#client-usps i {
+#client-sectors-right i {
     font-size: 30px;
 }
 
@@ -351,7 +357,7 @@ section {
     margin: 0 10px;
 }
 
-#client-usps {
+#client-sectors-right {
     display: flex;
     /*
     display: grid;
@@ -411,43 +417,81 @@ section {
 #sets-apart-image {}
 
 #contact {
-    background-color: #59A96A;
+    background: #59A96A;
     color: #fff;
-    text-align: center;
+    text-align: left;
+    display: flex;
+    padding: 75px 10vw;
+}
+
+#contact input:focus + label,
+#contact input:active + label,
+#contact input:valid + label,
+#contact textarea:focus + label,
+#contact textarea:active + label,
+#contact textarea:valid + label {
+    color: #1B4F22;
+    font-weight: 700;
+    font-size: 0.8em;
+    top: -15;
+    left: 0;
+}
+
+#contact input:focus ~ .form-input::after,
+#contact input:active + .form-input::after,
+#contact input:valid + .form-input::after,
+#contact textarea:focus + .form-input::after,
+#contact textarea:active + .form-input::after,
+#contact textarea:valid + .form-input::after {
+    color: #59A96A;    
+}
+
+#contact-left {
+    padding: 0 10vw 0 0;
 }
 
 #contact-form {
-    width: 600px;
+    width:500px;
     margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 5px 5px 5px rgba(27, 79, 34, 0.5);
+    text-align: center;
 }
 
-#contact form input,
-#contact form textarea {
+form {
+    margin: 0 0 50px;
+}
+
+.form-input {
+    position: relative;
+    margin: 0 0 30px;
+}
+
+.form-input::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #393E41;
+}
+
+#contact input,
+#contact textarea {
     border: none;
     width: 100%;
-    margin: 10px 0;
-    padding: 15px 10px;
+    padding: 10px 0;
     font-size: 16px;
     font-family: inherit;
-}
-
-#contact form:first-child {
-    margin: 20px 0 10px;
+    color: #393E41;
+    background: rgba(0,0,0,0);
+    outline: none;
 }
 
 #contact form:last-child {
     margin: 10px 0 20px;
-}
-
-#contact button {
-    border: 3px solid #fff;
-    border-radius: 10px;
-    padding: 30px 75px;
-    font-size: 25px;
-    font-weight: 700;
-    color: #fff;
-    background-color: transparent;
-    cursor: pointer;
 }
 
 #contact button:active,
@@ -455,6 +499,15 @@ section {
     background: #fff;
     color: #59A96A;
     transition: .1s ease-in-out;
+}
+
+#contact label {
+    color: #393E41;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    z-index: 10;
+    transition: all 0.2s ease-out;
 }
 
 
@@ -471,9 +524,37 @@ footer {
 
 .slant-down {}
 
+@media (max-width: 1400px) {
+    
+    #client-sectors-right {
+        flex-direction: column;
+    }
+
+    #cards-right {
+        padding: 0;
+    }
+
+}
+
 @media (max-width : 1200px) {
 
-    .servers {}
+    #about {
+        background: url('./assets/wave.svg') 100% 100% / 100vw no-repeat;
+    }
+
+    #client-sectors {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #client-sectors-left {
+        text-align: center;
+        padding: 0;
+    }
+
+    #client-sectors-right {
+        margin: 30px 0 0;
+    }
 
     .server-icon {
         justify-content: center;
@@ -496,17 +577,6 @@ footer {
     #client-sectors {
         flex-direction: column;
         padding: 60px 5vw;
-    }
-
-    #client-sectors-left {
-        text-align: center;
-        padding: 0;
-        margin: 0 0 30px;
-    }
-
-    #client-usps {
-        grid: auto / auto;
-        justify-content: center;
     }
 
     .client-icon {
