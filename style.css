@@ -12,19 +12,22 @@ body {
     color: #393E41;
     line-height: 150%;
     font-size: 16px;
-    text-align: center;
 }
 
 h2 {
     font-size: 40px;
     line-height: 1.3em;
-    margin: 0 0 40px;
+    margin: 0 0 20px;
 }
 
 h4 {
     margin: 0 0 10px;
-    color: #1B4F22;
-    font-size: 20px;
+    color: #fff;
+    font-size: 18px;
+    background: #59A96A;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: fit-content;
 }
 
 #contact-bar {
@@ -56,11 +59,11 @@ nav {
 }
 
 #nav-bar {
-    padding: 25px 50px;
+    padding: 25px 0;
     background-color: #fff;
     display: flex;
     align-items: center;
-    width: 75vw;
+    width: 80vw;
 }
 
 #logo {
@@ -80,11 +83,10 @@ nav #nav-buttons {
     margin-left: auto;
 }
 
-nav button {
+button {
     background: none;
     border: none;
     font-size: 18px;
-    margin: 0 10px;
     padding: 0px 20px;
     color: #000;
     font-weight: 700;
@@ -92,6 +94,10 @@ nav button {
     position: relative;
     letter-spacing: -0.5;
     outline: none;
+}
+
+nav button {
+    margin: 0 10px;
 }
 
 nav button::before {
@@ -117,12 +123,13 @@ nav button:active {}
 
 .contact-button {
     /*border: 3px solid #f57d22;*/
-    margin: 0 0 0 40px;
+    font-weight: 700;
     color: #fff;
     background: #f59322;
     padding: 20px 40px;
     transition: all 0.1s ease-in-out;
     border: none;
+    width: 300px;
 }
 
 .contact-button:hover,
@@ -135,16 +142,21 @@ nav button:active {}
     transform: scaleX(0);
 }
 
+nav .contact-button {
+    margin: 0 0 0 40px;
+    width: auto;
+}
+
 .main {
     padding: 174px 0 0;
 }
 
 section {
-    padding: 75px 20px;
+    padding: 75px 10vw;
 }
 
 #about {
-    padding: 50px 0;
+    padding: 50px 10vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -167,9 +179,8 @@ section {
 }
 
 #hero-container {
-    max-width: 40%;
+    max-width: 50%;
     position: relative;
-    padding: 0 5vw;
 }
 
 #about img {
@@ -178,7 +189,7 @@ section {
     position: relative;
     z-index: 1;
 }
-
+/*
 #hero-container::before {
     content: "";
     position: absolute;
@@ -202,24 +213,19 @@ section {
     #f59322 60%);
     z-index: 0;
 }
+*/
 
 #about button {
-    background: rgba(245, 145, 34, 1);
-    color: #fff;
-    border: none;
-    font-size: 18px;
-    font-weight: 700;
     width: 300px;
-    padding: 25px 0;
+    margin: 25px 0 0;
 }
 
 #about-text {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 60%;
+    width: 40%;
     text-align: left;
-    padding: 0 10vw;
 }
 
 #h1-line-two {
@@ -330,6 +336,7 @@ section {
 
 #services {
     background-color: #fff;
+    text-align: center;
 }
 
 
@@ -386,19 +393,67 @@ section {
     background-size: 40%;
 }
 
-#sets-apart p {
-    font-size: 20px;
+#sets-apart-list {
+    padding: 0;
+    margin: 50px 0 0;
+    counter-reset: sets-apart-counter -1 sets-apart-counter-right 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 1000px;
+    height: 596px;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+#sets-apart-list div {
+    margin: 0 25px 25px 0;
+    padding: 35px 35px 35px 110px;
+    background: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    width: calc(50% - 25px);
+    box-sizing: border-box;
+    height: fit-content;
+    line-height: 125%;
+    position: relative;
+    box-shadow: 5px 5px 5px rgb(203, 217, 238);
+    border-radius: 15px;
+    color: #1B264F;
+}
+
+#sets-apart-list div::before {
+    counter-increment: sets-apart-counter 2;
+    content: "0" counter(sets-apart-counter);
+    color: rgb(202, 220, 248);
+    font-size: 60px;
+    position: absolute;
+    top: 47px;
+    left: 25px;
+}
+
+#sets-apart-list div:nth-child(n+4)::before {
+    counter-increment: sets-apart-counter-right 2;
+    content: "0" counter(sets-apart-counter-right);
+}
+
+#sets-apart-list p {
+    font-size: 16px;
+    margin: 15px 0 0;
+    font-weight: 400;
+    color: #393E41;
 }
 
 #sets-apart-wrapper {
-    padding: 60px 0;
+    padding: 60px 10vw;
 }
 
-#sets-apart-content {
-    display: flex;
-    justify-content: center;
+#sets-apart-content p {
+    font-size: 1em;
+    font-weight: 400;
 }
 
+/*
 #sets-apart-list {
     max-width: 50%;
     background: #fff;
@@ -408,11 +463,7 @@ section {
     display: flex;
     color: #1B264F;
     text-align: left;
-}
-
-#sets-apart-list li {
-    margin: 20px 0;
-}
+}*/
 
 #sets-apart-image {}
 
@@ -422,6 +473,11 @@ section {
     text-align: left;
     display: flex;
     padding: 75px 10vw;
+}
+
+#contact h4 {
+    color: #59A96A;
+    background: #fff;
 }
 
 #contact input:focus + label,
@@ -447,28 +503,39 @@ section {
 }
 
 #contact-left {
-    padding: 0 10vw 0 0;
+    padding: 0 20vw 0 0;
 }
 
 #contact-form {
-    width:500px;
+    width:550px;
     margin: 0 auto;
     background: #fff;
-    padding: 40px;
+    padding: 50px 40px;
     box-shadow: 5px 5px 5px rgba(27, 79, 34, 0.5);
     text-align: center;
 }
 
 form {
-    margin: 0 0 50px;
+    margin: 0 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .form-input {
     position: relative;
     margin: 0 0 30px;
+    width: 45%;
 }
 
-.form-input::after {
+.form-textarea {
+    position: relative;
+    width: 100%;
+}
+
+.form-input::after,
+.form-textarea::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -481,28 +548,29 @@ form {
 #contact input,
 #contact textarea {
     border: none;
-    width: 100%;
     padding: 10px 0;
     font-size: 16px;
     font-family: inherit;
     color: #393E41;
     background: rgba(0,0,0,0);
     outline: none;
+    width: 100%;
+}
+/*
+#contact input {
+    width: 45%;
 }
 
+#contact textarea {
+    width: 100%;
+}
+*/
 #contact form:last-child {
     margin: 10px 0 20px;
 }
 
-#contact button:active,
-#contact button:hover {
-    background: #fff;
-    color: #59A96A;
-    transition: .1s ease-in-out;
-}
-
 #contact label {
-    color: #393E41;
+    color: rgb(158, 170, 177);
     position: absolute;
     top: 8px;
     left: 0;
@@ -514,8 +582,9 @@ form {
 footer {
     background-color: #1B264F;
     color: #fff;
-    padding: 60px 20px 40px;
+    padding: 60px 10vw 40px;
     line-height: 200%;
+    text-align: center;
 }
 
 .slant-up {

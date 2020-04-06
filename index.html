@@ -35,7 +35,7 @@
         <div id="about-text">
             <h1>Expert, Affordable IT and Infrastructure Support for Your Small Business</h1>
             <p>BR-IT offers fast and comprehensive service to suit your budget and needs.</p>
-            <button>Contact Us</button>
+            <button class="contact-button">Contact Us</button>
         </div>
         <div id="hero-container">
             <img id="hero-image" src="./assets/hero.jpg">
@@ -158,42 +158,34 @@
             <path fill="#fff" d="M100 102 L0 0 L100 0 Z" style="filter:url(#dropshadow2)"></path>
         </svg>
         <div id="sets-apart-wrapper">
-            <h2>What sets us apart</h2>
-            <p>We've been supporting businesses in the South East of England and London for nearly ten years.</p>
-            <div id="sets-apart-content">
-                <div id="sets-apart-list">
-                    <ul>
-                        <li>Support whenever you need it, 8.30am - 7.00pm Mon - Fri</li>
-                        <li>Parts and procurement included as standard</li>
-                        <li>Bespoke service catered to your needs and budget</li>
-                        <li>10 years of experience for companies in the South East and London</li>
-                        <li>99% of issues are solved without a callout</li>
-                    </ul>
+            <h4>About Us</h4>
+            <h2>What Sets Us Apart</h2>
+            <p>Here are the ways in which we provide our customers with the best-in-class support:</p>
+            <div id="sets-apart-list">
+                <div>Support Whenever You Need It <p>We're on call 8.30am - 7.00pm Mon - Fri, with weekend support available upon request as an added extra.</p>
+                </div>
+                <div>
+                    Parts and Procurement Included <p>We're VAT registered and are happy to procure new or used parts according to your specification.</p>
+                </div>
+                <div>
+                    Bespoke Service <p>Every business is different, and we're attentive to both your budget and needs to provide the best service.</p>
+                </div>
+                <div>
+                    10 Years Serving the South East <p>We've a proven track record of keeping business infrastructure running across both Kent and London.</p>
+                </div>
+                <div>
+                    99% of Issues are Solved Without a Callout <p>Our number-one priority is saving you time and money, so we aim to solve as much as possible remotely.</p>
                 </div>
             </div>
         </div>
-        <!--<svg class="slant-up" xmlns="http://www.w3.org/2000/svg" width="100%" height="100" viewBox="0 0 100 102"
-                preserveAspectRatio="none">
-                <filter id="dropshadow3" height="200%">
-                    <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
-                    <feOffset dx="0" dy="0" result="offsetblur" />
-                    <feComponentTransfer>
-                        <feFuncA type="linear" slope="0.3" />
-                    </feComponentTransfer>
-                    <feMerge>
-                        <feMergeNode />
-                        <feMergeNode in="SourceGraphic" />
-                    </feMerge>
-                </filter>
-                <path fill="#59A96A" d="M100 0 L0 102 L102 102 Z" style="filter:url(#dropshadow3)"></path>
-            </svg>-->
     </section>
 
     <section id="contact">
         <div id="contact-left">
             <h4>Contact Us</h4>
             <h2>Get in touch and let's see how we can help you.</h2>
-            <p>We respond to all enquiries within two working days, and we're happy to talk through your project and provide a quote.</p>
+            <p>We respond to all enquiries within two working days, and we're happy to talk through your project and
+                provide a quote.</p>
         </div>
         <div id="contact-right">
             <div id="contact-form">
@@ -211,16 +203,17 @@
                         <label for="email">Email Address</label>
                     </div>
                     <div class="form-input">
-                        <input type="tel" id="telephone-number" name="user_telephone_number" maxlength="35" size="50" required>
+                        <input type="tel" id="telephone-number" name="user_telephone_number" maxlength="35" size="50"
+                            required>
                         <label for="telephone-number">Telephone Number</label>
                     </div>
-                    <div class="form-input">
-                        <textarea id="user-project" name="user_project" cols="50"
-                        minlength="1" rows="8" required></textarea>
+                    <div class="form-textarea">
+                        <textarea id="user-project" name="user_project" cols="50" minlength="1" rows="8"
+                            required></textarea>
                         <label for="user-project">About Your Project</label>
                     </div>
                 </form>
-                <button>
+                <button class="contact-button">
                     Contact Us
                 </button>
             </div>
