@@ -7,11 +7,12 @@ const clientSectorsPosition = clientSectors.getBoundingClientRect().top + navOff
 const servicesPosition = services.getBoundingClientRect().top + navOffset;
 const setsApartPosition = setsApart.getBoundingClientRect().top + navOffset;
 const contactPosition = contact.getBoundingClientRect().top + navOffset;
-
+/*
 console.log(`clientSectors postion: ${clientSectorsPosition}`);
 console.log(`services postion: ${servicesPosition}`);
 console.log(`setsApart postion: ${setsApartPosition}`);
 console.log(`contact postion: ${contactPosition}`);
+
 
 document.getElementById('client-sectors-button').onclick = () => {
  window.scrollTo({
@@ -40,7 +41,7 @@ document.getElementById('contact-button').onclick = () => {
      behavior: 'smooth'
  })  
 };
-
+*/
 /*
 document.getElementById('services-button').onclick = () => {
  document.getElementById('services').scrollIntoView({behavior: 'smooth', block: 'center'});   
