@@ -55,4 +55,3 @@ document.getElementById('contact-button').onclick = () => {
 }*/
 
 document.getElementById('footer-date').innerHTML = new Date().getFullYear();
-
