@@ -64,6 +64,7 @@ nav {
     display: flex;
     align-items: center;
     width: 80vw;
+    justify-content: space-between;
 }
 
 #logo {
@@ -77,10 +78,6 @@ nav {
 
 #logo h1 {
     margin-left: 25px;
-}
-
-nav #nav-buttons {
-    margin-left: auto;
 }
 
 button {
